@@ -46,13 +46,13 @@ router.post('/upload',upload.single('uploadedFile'), async (req, res) => {
 }
 
   // Tăng chiều cao cho các ô từ B13  đến B230
-  for (let row = start; row <= end; row++) {
-    let rowHeight = sheet.getRow(row).height 
-    sheet.getRow(row).height = rowHeight <= 25 ? 29 : rowHeight + rowHeight * 0.1;
-}
+//   for (let row = start; row <= end; row++) {
+//     let rowHeight = sheet.getRow(row).height 
+//     sheet.getRow(row).height = rowHeight <= 25 ? 29 : rowHeight + rowHeight * 0.1;
+// }
 
       // Lưu file output
-  const outputFilePath = `outputs/edit-height/${req.file.filename}_EDIT-HEIGHT.xlsx`;
+  const outputFilePath = `outputs/edit-height/${req.file.filename}`;
   await workbook.xlsx.writeFile(outputFilePath);
       res.json({
           message: 'success'

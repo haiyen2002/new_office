@@ -41,8 +41,6 @@ app.use('/offset-name',offsetName)
 app.use('/getName',getName)
 app.use('/other-content',otherContent)
 
-
-
 app.get('/', (req, res)=>{
     res.render("home.ejs");
 })
